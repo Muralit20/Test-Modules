@@ -16,7 +16,6 @@ variable "number_of_instances" {
 variable "subnet_id" {
   description = "number of instances to be created"
   type        = list(string)
-  default     = ["subnet-0447b8df463aab190", "subnet-03288032898556035"]
 }
 
 variable "ami_id" {
@@ -30,4 +29,9 @@ variable "instance_type" {
   type        = string
   default     = "t2.micro"
 }
-
+/*
+variable "instance_name" {
+  description = "Chosse your instance_name"
+  type        = string
+}
+*/

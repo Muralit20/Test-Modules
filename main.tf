@@ -2,6 +2,7 @@ resource "aws_instance" "ec2_instance" {
   count                  = (var.number_of_instances) == 2 ? 0 : 1
   ami                    = var.ami_id
   subnet_id              = element(var.subnet_id, count.index)
+  #instance_name          = var.instance_name
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.main.id]
   key_name               = "muvi-${var.stage}-key-01"
